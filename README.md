@@ -94,6 +94,19 @@ Date: Thu, 24 Apr 2025 00:49:14 GMT
 {"shortenedUrl":"http://short.ly/b3C416","originalUrl":"http://example.com"}
 ```
 
+#### Confirm redirection
+```
+curl -X GET --include "http://short.ly/b3C416"
+```
+Response:
+```
+HTTP/1.1 302 
+Location: http://example.com
+Content-Length: 0
+Date: Thu, 24 Apr 2025 01:32:44 GMT
+```
+
+
 #### Delete an existing URL mapping
 
 ```
